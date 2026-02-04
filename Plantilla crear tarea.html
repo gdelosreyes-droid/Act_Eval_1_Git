@@ -16,7 +16,7 @@
 
     .panel {
       display: flex;
-      gap: 8px;
+      gap: 10px;
       flex-wrap: wrap;
       align-items: center;
       padding: 12px;
@@ -26,15 +26,15 @@
     }
 
     input[type="text"] {
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #ccc;
-      border-radius: 6px;
+      border-radius: 7px;
       min-width: 260px;
       flex: 1;
     }
 
     button {
-      padding: 10px 14px;
+      padding: 12px 23px;
       border: none;
       border-radius: 6px;
       cursor: pointer;
@@ -43,8 +43,8 @@
 
     /* Colores iniciales (se ajustarán en la actividad) */
     #btnAdd { background-color: #13d01c; color: white; } /* verde */
-    #btnDel { background-color: #821414; color: white; } /* rojo */
-    #btnEdit { background-color: #1565c0; color: white; } /* azul */
+    #btnDel { background-color: #da1818; color: white; } /* rojo */
+    #btnEdit { background-color: #15afc0; color: white; } /* azul */
 
     ul {
       list-style: none;
@@ -64,7 +64,7 @@
     }
 
     .tag {
-      font-size: 12px;
+      font-size: 20px;
       padding: 4px 8px;
       border-radius: 999px;
       background: #f1f1f1;
@@ -187,6 +187,18 @@
     render();
     }
 
+    // Rama "editar"
+    function editSelected() {
+      // TODO:
+      // - Si no hay tarea seleccionada, avisar
+      // - Pedir (prompt) el nuevo texto o usar el input si prefieres
+      // - Validar texto
+      // - Actualizar la tarea seleccionada
+      // - Renderizar
+      // - Status con mensaje
+      setStatus("TODO: Implementa editSelected()", "danger");
+    }
+
     // Rama "eliminar"
 
     function deleteSelected() {
@@ -212,17 +224,7 @@
     render();
     }
 
-    // Rama "editar"
-    function editSelected() {
-      // TODO:
-      // - Si no hay tarea seleccionada, avisar
-      // - Pedir (prompt) el nuevo texto o usar el input si prefieres
-      // - Validar texto
-      // - Actualizar la tarea seleccionada
-      // - Renderizar
-      // - Status con mensaje
-      setStatus("TODO: Implementa editSelected()", "danger");
-    }
+    
 
     // =========================
     // Inicio
